@@ -56,6 +56,17 @@ services:
       # Syslog TCP
       - 1514:1514
     restart: "unless-stopped"
+  influxdb1:
+    container_name: influxdb
+    image: influxdb:1.8
+    ports:
+      - '8085:8086'
+    volumes:
+      - influxdb1_data:/var/lib/influxdb1
+    environment:
+      # Change this to your time zone, valid time zones can be found here: https://www.joda.org/joda-time/timezones.html
+      - TZ=America/Los_Angeles
+    restart: "unless-stopped"
   influxdb:
     container_name: influxdb
     image: influxdb:2.1.1
@@ -86,6 +97,7 @@ services:
     restart: "unless-stopped"
 volumes:
   grafana_data:
+  influxdb1_data:
   influxdb2_data:
   graylog_data:
   es_data:
