@@ -57,7 +57,7 @@ services:
       - 1514:1514
     restart: "unless-stopped"
   influxdb1:
-    container_name: influxdb
+    container_name: influxdb1
     image: influxdb:1.8
     ports:
       - '8085:8086'
