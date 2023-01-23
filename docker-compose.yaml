@@ -94,6 +94,7 @@ services:
       - GF_SECURITY_ADMIN_USER=opnsense
       - GF_SECURITY_ADMIN_PASSWORD=opnsense
       - GF_INSTALL_PLUGINS=grafana-worldmap-panel
+      - GF_AUTH_ANONYMOUS_ENABLED=true
     restart: "unless-stopped"
 volumes:
   grafana_data:
