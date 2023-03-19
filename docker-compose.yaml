@@ -11,7 +11,7 @@ services:
       - TZ=America/Los_Angeles
   elasticsearch:
     container_name: elasticsearch
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.17.9
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
     volumes:
       - es_data:/usr/share/elasticsearch/data
     environment:
