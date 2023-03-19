@@ -4,6 +4,6 @@
 1. make changes in this folder
 2. commit and push the changes
 3. connect to grafana machine
-4. cd git/grafana
-5. git pull
-6. docker compose up
+4. `cd git/grafana`
+5. `git pull`
+6. `docker compose up -d`

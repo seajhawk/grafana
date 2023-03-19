@@ -80,11 +80,12 @@ services:
     restart: "unless-stopped"
   grafana:
     container_name: grafana
-    image: grafana/grafana:8.3.3
+    image: grafana/grafana:8.4.11
     ports:
       - '3000:3000'
     volumes:
       - grafana_data:/var/lib/grafana
+      - grafana_storage/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml
     depends_on:
       - influxdb
     environment:
@@ -101,10 +102,11 @@ services:
       - GF_SMTP_ENABLED=true
       - GF_SMTP_HOST=smtp-relay.sendinblue.com:587
       - GF_SMTP_USER=chris@harriskids.com
-      - GF_SMTP_PASSWORD=Uk3jyApSd5JYg7xI
+      - GF_SMTP_PASSWORD=
     restart: "unless-stopped"
 volumes:
   grafana_data:
+  grafana_storage:
   influxdb1_data:
   influxdb2_data:
   graylog_data:
