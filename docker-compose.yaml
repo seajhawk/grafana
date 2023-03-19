@@ -29,7 +29,7 @@ services:
     restart: "unless-stopped"
   graylog:
     container_name: graylog
-    image: graylog/graylog:4.2.4
+    image: graylog/graylog:4.3.13
     volumes:
       - graylog_data:/usr/share/graylog/data
     environment:
@@ -81,6 +81,7 @@ services:
   grafana:
     container_name: grafana
     image: grafana/grafana:9.3.8
+    # Grafana versions: https://grafana.com/grafana/download/9.3.8
     ports:
       - '3000:3000'
     volumes:
