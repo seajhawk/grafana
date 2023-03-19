@@ -85,7 +85,7 @@ services:
       - '3000:3000'
     volumes:
       - grafana_data:/var/lib/grafana
-      - grafana_storage/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml
+      # - grafana_storage/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml
     depends_on:
       - influxdb
     environment:
@@ -106,7 +106,7 @@ services:
     restart: "unless-stopped"
 volumes:
   grafana_data:
-  grafana_storage:
+  # grafana_storage:
   influxdb1_data:
   influxdb2_data:
   graylog_data:
