@@ -6,4 +6,5 @@
 3. connect to grafana machine
 4. `cd git/grafana`
 5. `git pull`
+6. Update GF_SMTP_PASSWORD value with SMTPkey for SendInBlue
 6. `docker compose up -d`

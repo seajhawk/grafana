@@ -85,7 +85,7 @@ services:
     restart: "unless-stopped"
   grafana:
     container_name: grafana
-    image: grafana/grafana:9.3.8
+    image: grafana/grafana:9.4.7
     # Grafana versions: https://grafana.com/grafana/download/9.3.8
     ports:
       - '3000:3000'
